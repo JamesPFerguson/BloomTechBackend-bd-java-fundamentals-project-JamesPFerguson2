@@ -122,8 +122,12 @@ public class GameController {
     }
 
     private void applyCommand(Command command) {
-        if (command.getVerb().equalsIgnoreCase(CommandConstants.LOOK)) {
-            describeCurrentScene();
+        switch(command) {
+            case LOOK: describeCurrentScene();
+            case MOVE: move(command.getObjectName());
+            case HELP: printHelp();
+        }
+
         } else if (command.getVerb().equalsIgnoreCase(CommandConstants.MOVE)) {
             move(command.getObjectName());
         } else if (command.getVerb().equalsIgnoreCase(CommandConstants.HELP)) {
