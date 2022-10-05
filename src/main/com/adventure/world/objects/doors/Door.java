@@ -18,7 +18,7 @@ public class Door implements Tangible {
     private boolean isOpen = false;
 
     //TODO Add a level property
-    private int level;
+    private int level = 1;
 
     /**
      * Creates a basic door.
