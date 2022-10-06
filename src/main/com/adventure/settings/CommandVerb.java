@@ -26,28 +26,40 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        switch(verbString.toLowerCase()) {
+        CommandVerb commandVerb;
+        switch (verbString.toLowerCase()) {
             case "take":
-                return TAKE;
+                commandVerb = TAKE;
+                break;
             case "move":
-                return MOVE;
+                commandVerb = MOVE;
+                break;
             case "use":
-                return USE;
+                commandVerb = USE;
+                break;
             case "dig":
-                return DIG;
+                commandVerb = DIG;
+                break;
             case "examine":
-                return EXAMINE;
+                commandVerb = EXAMINE;
+                break;
             case "look":
-                return LOOK;
+                commandVerb = LOOK;
+                break;
             case "help":
-                return HELP;
+                commandVerb = HELP;
+                break;
             case "fight":
-                return FIGHT;
+                commandVerb = FIGHT;
+                break;
             case "inventory":
-                return INVENTORY;
+                commandVerb = INVENTORY;
+                break;
             default:
-                return INVALID;
+                commandVerb = INVALID;
+                break;
         }
+        return commandVerb;
     }
 
 }

@@ -122,7 +122,7 @@ public class GameController {
     }
 
     private void applyCommand(Command command) {
-        switch(command.getVerb()) {
+        switch (command.getVerb()) {
             case LOOK: describeCurrentScene();
                 break;
             case MOVE: move(command.getObjectName());
@@ -139,7 +139,9 @@ public class GameController {
                 break;
             case FIGHT:
                 break;
-            default: printInvalidCommand();
+            default:
+                printInvalidCommand();
+                break;
         }
     }
 
