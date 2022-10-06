@@ -48,6 +48,7 @@ public class MT6 {
 
         when(processor.prompt()).thenReturn("use key");
         Command command = processor.getNextCommand();
+        System.out.println(command.toString());
         assertEquals(CommandVerb.USE, command.getVerb());
         assertEquals("key", command.getObjectName());
     }
